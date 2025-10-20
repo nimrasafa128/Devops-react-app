@@ -1,0 +1,263 @@
+/* src/components/LandingPage.css */
+.landing-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #326ce5;
+}
+
+.k8s-icon {
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.signup-btn {
+  background-color: #326ce5;
+  color: white;
+}
+
+.signup-btn:hover {
+  background-color: #2456b7;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  padding: 4rem 5%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  min-height: 80vh;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cta-primary, .cta-secondary {
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-primary {
+  background-color: #326ce5;
+  color: white;
+}
+
+.cta-primary:hover {
+  background-color: #2456b7;
+}
+
+.cta-secondary {
+  background-color: transparent;
+  color: #326ce5;
+  border: 2px solid #326ce5;
+}
+
+.cta-secondary:hover {
+  background-color: #f0f5ff;
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cluster-visual {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.node {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  background-color: #326ce5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.master {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1a365d;
+}
+
+.worker {
+  top: 20%;
+  left: 20%;
+}
+
+.worker:nth-child(3) {
+  top: 20%;
+  right: 20%;
+  left: auto;
+}
+
+.pod {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #63b3ed;
+}
+
+.pod:nth-child(4) {
+  bottom: 30%;
+  left: 30%;
+}
+
+.pod:nth-child(5) {
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pod:nth-child(6) {
+  bottom: 30%;
+  right: 30%;
+  left: auto;
+}
+
+.features-section {
+  padding: 4rem 5%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1a202c;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.feature-card p {
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.landing-footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1a202c;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .cluster-visual {
+    width: 300px;
+    height: 300px;
+    margin-top: 2rem;
+  }
+  
+  .node {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .pod {
+    width: 30px;
+    height: 30px;
+  }
+}
